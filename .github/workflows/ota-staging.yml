@@ -3,7 +3,7 @@ name: OTA Update for Staging
 on:
   push:
     branches:
-      - release/*
+      - master
 
 jobs:
   build:
