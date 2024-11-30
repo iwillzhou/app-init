@@ -1,0 +1,12 @@
+name: OTA Update for Staging
+
+on:
+  push:
+    branches:
+      - release/*
+
+jobs:
+  build:
+    uses: ./.github/workflows/ota-expo.yml
+    secrets:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}

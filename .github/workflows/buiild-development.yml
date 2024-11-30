@@ -1,0 +1,15 @@
+name: Build for Development
+
+on:
+  push:
+    branches:
+      - feature/*
+
+jobs:
+  build:
+    uses: ./.github/workflows/build-eas.yml
+    with:
+      profile: development
+      build-type: apk
+    secrets:
+      EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
